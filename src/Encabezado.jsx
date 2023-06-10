@@ -1,5 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function Encabezado() {
     return (
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/200px-Coca-Cola_logo.svg.png" alt="Coca Cola Logo" width={180} />
+        <div className="container my-5">
+            <div className="row">
+                <div className="col text-center">
+                    <Link to={"/"}>
+                        <img src="https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/59.0.1/logo/logo___8ebc4231614a7b41a4258354ce76e1e1.svg" alt="Carrefour Logo" width={180} />
+                    </Link>
+                </div>
+            </div>
+        </div>
     )
 };

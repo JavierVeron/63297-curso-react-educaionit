@@ -1,14 +1,29 @@
 import './App.css';
-//import Desafio3 from './Clase3/Desafio/Desafio3';
-import Netlifx from './Clase3/Desafio/Netflix';
-//import Condicional from './Clase3/Condicional';
-//import Formularios from './Clase3/Formularios';
-//import Uplifting from './Clase3/Uplifting';
-//import Encabezado from './Encabezado';
+import Error404 from './Clase4/Error404';
+import Item from './Clase4/Item';
+import PaginaPrincipal from './Clase4/PaginaPrincipal';
+import Encabezado from './Encabezado';
+import { Routes, Route } from 'react-router-dom';
+//import { useRoutes } from 'react-router-dom';
 
 function App() {
+  /* const rutas = useRoutes([
+    {path:'/', element:<PaginaPrincipal />},
+    {path:'/item/:idProducto', element:<Item />},
+    {path:'/*', element:<Error404 />}
+  ]); */
+
   return (
-    <Netlifx />
+    <>
+      <Encabezado />
+      <Routes>
+        <Route path='/' element={<PaginaPrincipal />} />
+        <Route path='/categoria/:idCategoria' element={<PaginaPrincipal />} />
+        <Route path='/item/:idProducto' element={<Item />} />
+        <Route path='/*' element={<Error404 />} />
+      </Routes>
+      {/* {rutas} */}
+    </>
   );
 }
 
