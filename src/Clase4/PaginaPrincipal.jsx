@@ -1,20 +1,23 @@
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import productos from "./json/productos.json";
-import { useEffect, useState } from "react";
+/* import productos from "./json/productos.json"; */
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../Clase5/context/ThemeContext";
+import Consumer from "../Clase5/Consumer";
 
 const PaginaPrincipal = () => {
     const {idCategoria} = useParams();
     const [parametros, setParametros] = useSearchParams();
     const redireccion = useNavigate();
     const [items, setItems] = useState([]);
+    const {prods, totalProductos} = useContext(ThemeContext);
 
     useEffect(() => {
         if (idCategoria) {
             const litros = parseInt(parametros.get("litros"));
-            const arrayProductos = litros ? productos.filter(item => (item.categoria.toUpperCase() === idCategoria.toUpperCase()) && (item.litros === litros)) : productos.filter(item => item.categoria.toUpperCase() === idCategoria.toUpperCase());
+            const arrayProductos = litros ? prods.filter(item => (item.categoria.toUpperCase() === idCategoria.toUpperCase()) && (item.litros === litros)) : prods.filter(item => item.categoria.toUpperCase() === idCategoria.toUpperCase());
             arrayProductos.length > 0 ? setItems(arrayProductos) : redireccion("/error");
         } else {
-            setItems(productos);
+            setItems(prods);
         }
     }, [idCategoria, parametros, redireccion]);
 
@@ -32,6 +35,10 @@ const PaginaPrincipal = () => {
                             </p>
                         </Link>
                     </div>))}
+                <p className="text-center">Total de Productos: <b>{totalProductos()}</b></p>
+                {/* <Consumer>
+                    <h3>Estamos viendo Consumer del Context</h3>
+                </Consumer> */}
             </div>
         </div>
     )

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { ThemeContext } from "./Clase5/context/ThemeContext";
+import { useContext } from "react";
 
 export default function Encabezado() {
+    const {sumaTotalProductos} = useContext(ThemeContext);
+
     return (
         <div className="container my-5">
             <div className="row">
@@ -8,6 +12,7 @@ export default function Encabezado() {
                     <Link to={"/"}>
                         <img src="https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/59.0.1/logo/logo___8ebc4231614a7b41a4258354ce76e1e1.svg" alt="Carrefour Logo" width={180} />
                     </Link>
+                    <p>Suma Total de Productos: <b>${sumaTotalProductos()}</b></p>
                 </div>
             </div>
         </div>
