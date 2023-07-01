@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import productos from "./json/productos.json";
 import { useEffect, useState } from "react";
+import ItemCantidad from "../Clase6/ItemCantidad";
 
 const Item = () => {
     const {idProducto} = useParams();
@@ -23,6 +24,7 @@ const Item = () => {
                     <p className="text-body-tertiary">({item.descripcion})</p>
                     <p><b className="text-primary">${item.precio}</b></p>
                     <p><Link to={"/categoria/" + item.categoria + "/?litros=2"} className="text-secondary text-decoration-none">2 Litros</Link> <Link to={"/categoria/" + item.categoria + "/?litros=1"} className="text-secondary text-decoration-none">1 Litro</Link></p>
+                    <p><ItemCantidad item={item} cantidad={1} /></p>
                 </div>
             </div>
         </div>
