@@ -35,12 +35,12 @@ const Tasty = () => {
             <div className="row">
                 {recetas.map(receta => (
                     <div key={receta.id} className="col-md-3">
-                        <div class="card">
-                            <img src={receta.thumbnail_url} class="img-fluid" alt={receta.name} />
-                            <div class="card-body">
+                        <div className="card">
+                            <img src={receta.thumbnail_url} className="img-fluid" alt={receta.name} />
+                            <div className="card-body">
                                 <h3>{receta.name}</h3>
-                                <p class="card-text">{receta.description}</p>
-                                <p class="fw-light">Tiempo de preparación: <b>{receta.prep_time_minutes} minutos</b></p>
+                                <p className="card-text">{receta.description}</p>
+                                <p className="fw-light">Tiempo de preparación: <b>{receta.prep_time_minutes} minutos</b></p>
                             </div>
                         </div>
                     </div>

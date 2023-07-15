@@ -3,28 +3,30 @@ import Error404 from './Clase4/Error404';
 import Item from './Clase4/Item';
 import PaginaPrincipal from './Clase4/PaginaPrincipal';
 import Encabezado from './Encabezado';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartContextProvider from './context/cartContext';
 import Cart from './Clase6/Cart';
 import Checkout from './Clase6/Checkout';
 import ThankYou from './Clase6/ThankYou';
-import Tasty from './Clase7/Tasty';
+import Desafio8 from './Clase8/Desafio/Desafio8';
 
 function App() {
   return (
     <>
-      <CartContextProvider>
+      <BrowserRouter>
+        <CartContextProvider>
         <Encabezado />
-        <Routes>
-          <Route path='/' element={<Tasty />} />
-          <Route path='/categoria/:idCategoria' element={<PaginaPrincipal />} />
-          <Route path='/item/:idProducto' element={<Item />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/checkout' element={<Checkout />} />
-          <Route path='/thankyou' element={<ThankYou />} />
-          <Route path='/*' element={<Error404 />} />
-        </Routes>
-      </CartContextProvider>
+          <Routes>
+            <Route path='/' element={<Desafio8 />} />
+            <Route path='/categoria/:idCategoria' element={<PaginaPrincipal />} />
+            <Route path='/item/:idProducto' element={<Item />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/thankyou' element={<ThankYou />} />
+            <Route path='/*' element={<Error404 />} />
+          </Routes>
+        </CartContextProvider>
+      </BrowserRouter>
     </>
   );
 }
