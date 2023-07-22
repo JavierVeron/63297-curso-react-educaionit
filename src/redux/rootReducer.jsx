@@ -1,5 +1,3 @@
-import {createStore} from "redux";
-
 const productos = [
     {id:1, nombre:"Coca Cola", precio:700, stock:10},
     {id:2, nombre:"Pepsi", precio:650, stock:9},
@@ -18,6 +16,4 @@ const ProductosReducer = (prevState=productos, action) => {
     }
 }
 
-const store = createStore(ProductosReducer);
-
-export default store;
+export default ProductosReducer;

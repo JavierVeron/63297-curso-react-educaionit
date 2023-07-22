@@ -8,7 +8,7 @@ import CartContextProvider from './context/cartContext';
 import Cart from './Clase6/Cart';
 import Checkout from './Clase6/Checkout';
 import ThankYou from './Clase6/ThankYou';
-import Desafio8 from './Clase8/Desafio/Desafio8';
+import Desafio9 from './Clase9/Desafio/Desafio9';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <CartContextProvider>
         <Encabezado />
           <Routes>
-            <Route path='/' element={<Desafio8 />} />
+            <Route path='/' element={<Desafio9 />} />
             <Route path='/categoria/:idCategoria' element={<PaginaPrincipal />} />
             <Route path='/item/:idProducto' element={<Item />} />
             <Route path='/cart' element={<Cart />} />
