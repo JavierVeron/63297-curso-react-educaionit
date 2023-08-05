@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/63297-curso-react-educaionit/static/css/main.31d6cfe0.css",
-    "main.js": "/63297-curso-react-educaionit/static/js/main.a584b4dd.js",
-    "index.html": "/63297-curso-react-educaionit/index.html",
-    "static/media/trash.svg": "/63297-curso-react-educaionit/static/media/trash.3533bf93c28289586c172997d8703057.svg",
-    "static/media/cart.svg": "/63297-curso-react-educaionit/static/media/cart.a389ac9212fbb81d425020d2b4cde2b5.svg",
-    "main.a584b4dd.js.map": "/63297-curso-react-educaionit/static/js/main.a584b4dd.js.map"
+    "main.css": "/static/css/main.31d6cfe0.css",
+    "main.js": "/static/js/main.034cd900.js",
+    "index.html": "/index.html",
+    "static/media/trash.svg": "/static/media/trash.3533bf93c28289586c172997d8703057.svg",
+    "static/media/cart.svg": "/static/media/cart.a389ac9212fbb81d425020d2b4cde2b5.svg",
+    "main.034cd900.js.map": "/static/js/main.034cd900.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.a584b4dd.js"
+    "static/js/main.034cd900.js"
   ]
 }
