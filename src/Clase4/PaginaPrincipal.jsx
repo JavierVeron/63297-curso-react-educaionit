@@ -1,11 +1,10 @@
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-/* import productos from "./json/productos.json"; */
 import { useContext, useEffect, useState } from "react";
 import { cartContext } from "../context/cartContext";
 
 const PaginaPrincipal = () => {
     const {idCategoria} = useParams();
-    const [parametros, setParametros] = useSearchParams();
+    const {parametros} = useSearchParams();
     const redireccion = useNavigate();
     const [items, setItems] = useState([]);
     const {productos} = useContext(cartContext);
