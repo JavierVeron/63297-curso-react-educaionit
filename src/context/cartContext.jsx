@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import arrayProductos from "../Clase4/json/productos.json";
 
 export const cartContext = createContext();
@@ -59,6 +59,10 @@ const CartContextProvider = ({children}) => {
     const guardarOrdenCompra = (productos, cliente) => {
         setOrdenCompra({productos:productos, cliente:cliente});
     }
+
+    useEffect(() => {
+        setProductos(productos);
+    }, [productos]);
 
     return (
         <cartContext.Provider value={{productos, cart, ordenCompra, agregarProducto, eliminarProducto, agregarItem, quitarItem, vaciarCarrito, cantidadTotalProductos, sumaTotalProductos, guardarOrdenCompra}}>
